@@ -2,8 +2,6 @@ let parentClicks = 0;
 let childClicks = 0;
 let myParentVlicks = 0;
 
-
-
 document.getElementById("child").addEventListener("click", function (e) {
   e.preventDefault();
   e.stopPropagation();
@@ -13,7 +11,7 @@ document.getElementById("child").addEventListener("click", function (e) {
 
 document.getElementById("secondChild").addEventListener("click", function (e) {
   e.preventDefault();
-  e.stopPropagation(e);
+  e.stopPropagation();
 
   document.getElementById("parent-count").innerHTML = ++parentClicks + " ";
 });
@@ -21,8 +19,8 @@ document.getElementById("secondChild").addEventListener("click", function (e) {
 document
   .getElementById("mysecondChild")
   .addEventListener("click", function (e) {
-    e.preventDefault(e);
-    e.stopPropagation(e);
+    e.preventDefault();
+    e.stopPropagation();
 
     document.getElementById("myparent-count").innerHTML =
       ++myParentVlicks + " ";
